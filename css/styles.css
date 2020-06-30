@@ -1,0 +1,313 @@
+/* Con la clase * definimos formato para todos los elementos de la web */
+*{
+	margin: 0px;
+	padding: 0px;
+	/* evitamos que haya puntos en los elementos de la lista u otros elementos
+	que puedan usarlo*/
+	list-style: none;
+}
+
+/* Usamos .clearfix para limpiar los floats. */
+.clearfix{
+	float: none;
+	/* Limpiamos los flotados. Así al poner el float: left en el logo, no repercute
+	en el float de los elementos que lo rodean, en este caso el menú. */
+	clear: both;
+}
+
+/* Damos estilos a la caja global donde irá el contenido de la web*/
+#global{
+	width: 65%;
+	margin: 0px auto;
+	margin-top: 30px;
+	padding: 25px;
+	background: white;
+	/*Añadimos una pequeña sombra al exterior de la caja*/
+	box-shadow: 0px 0px 2px gray;
+}
+
+/* Maquetamos el logo*/
+#logo{
+	/* Ponemos fuente Verdana y si no hay, Arial */
+	font-family: Verdana, Arial;
+	font-size: 30px;
+	/* Separamos las letras entre sí 4px */
+	letter-spacing: 4px;
+	/* Altura de la línea*/
+	line-height: 75px;
+	/*Color de letras blanco */
+	color: white;
+	text-align: center;
+	width: 385px;
+	height: 80px;
+	margin-bottom: 20px;
+	float: left;
+}
+
+/* Damos estilo al menú. */
+#menu{
+	font-family: Helvetica, Arial;
+	background: #333;
+	width: 100%;
+	/* Convertimos el texto a mayúscula. */
+	text-transform: uppercase;
+	margin-bottom: 20px;
+}
+/* A todas las listas del elemento #menu. */
+#menu ul{
+	/* Altura de separación con la parte de arriba de la caja. */
+	line-height: 46px;
+}
+/* A los elementos li que haya dentro de #menu. */
+#menu ul li{
+	/* Separación entre línea y línea*/
+	height: 46px;
+	/* Ponemos cada elemento uno al lado de otro. */
+	display: inline-block;
+	transition: all 300ms;
+}
+
+/* Damos estilo a los enlaces del menú. */
+#menu a{ /* Es lo mismo que ésto: #menu ul li a{} */
+	display: block;
+	color: white;
+	/* Quitamos la decoración, así ya no tiene la línea que subraya los enlaces. */
+	text-decoration: none;
+	/* Separación de 30px entre enlace y enlace. */
+	padding-left: 30px;
+	padding-right: 30px;
+}
+
+/* Modificamos el estilo del plugin bxslider(slider imágenes). */
+.bx-wrapper, .bx-viewport{
+	height: 250px !important;/* Con !important, forzamos a que modifique la altura en caso de que 
+	interfiera con otra propiedad en la clase del plugin. */
+}
+
+/* Maquetamos los artículos. <div id="posts">. */
+#posts{
+	width: 60%;
+	float: left;
+	font-family: Helvetica, Arial;
+}
+
+/* Damos estilo a los artículos. <article class="post">. */
+.post{
+	padding: 7px;
+}
+
+/* Fechas de los artículos. */
+.post .date{
+	display: block;
+	color: gray;
+	margin-top: 5px;
+}
+/* parrafos de los artículos. */
+.post p{
+	margin-top: 10px;
+	margin-bottom: 20px;
+	line-height: 22px;
+	text-align: justify;/* Alinea el texto para que empiece y termine tosa las líneas dónde mismo. */
+}
+
+/* Encabezados h2 de toda la web */
+h2{
+	font-size: 30px;
+	color: #333;
+	font-family: Helvetica, Arial;
+}
+
+/* Botones Leer más. */
+.button-more{
+	display: block;/* Para que funcione como un bloque. */
+	font-size: 14px;
+	text-align: center;
+	padding: 15px;
+	background: #235E3D;
+	color: white;
+	text-decoration: none;
+	margin-top: 10px;
+	width: 70px;
+}
+/* Estilos sidebar*/
+#sidebar{
+	font-family: Helvetica, Arial;
+	width: 31%;
+	float: right;
+}
+
+#sidebar h4{
+	margin-top: 50px;
+	margin-bottom: 20px;
+	text-align: center;
+	line-height: 10px;
+	color: #333;
+	background: url('../img/lines.png') repeat-x;
+}
+
+#sidebar h4 span{
+	background: white;
+	padding: 5px;
+}
+
+#sidebar img{
+	width: 100%;
+}
+
+#sidebar p{
+	font-size: 15px;
+	text-align: justify;
+}
+
+/* Estilos pie de página */
+footer{
+	font-family: Helvetica, Arial;
+	color: white;
+	height: 47px;
+	background: rgba(51, 51, 51, 0.75);
+	margin: 0px auto;
+	width: 66%;
+	padding-left: 20px;
+	padding-right: 20px;
+	/*margin-top: 50px;*/
+	line-height: 47px;
+}
+
+/* Estilos para la caja principal del selector de temas. */
+#selector-theme{
+	position: fixed;/* Se queda fijado en esa posición aunque bajemos o subamos en la página. */
+	top: 40%;/* Que esté a un 40% de altura. */
+	background: rgba(51, 51, 51, 0.50);
+	width: 50px;
+	height: 100px;
+}
+
+/* Estilos comunes para los tres botones del selector. */
+#theme-green,
+#theme-red,
+#theme-blue{
+	width: 25px;
+	height: 25px;
+	border: 1px solid white;
+	display: block;
+	margin: 0px auto;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	cursor: pointer;
+}
+
+/* Estilo botón tema green. */
+#theme-green{
+	background: #235E3D;
+}
+
+/* Estilo botón tema rojo. */
+#theme-red{
+	background: #CA3413;
+}
+
+/* Estilo botón tema azul. */
+#theme-blue{
+	background: #1F87C4;
+}
+
+/* Estilo enlace Ir arriba, que nos lleva al principio de la página. */
+.subir{
+	color: white;
+	text-decoration: none;
+	display: block;
+	float: right;
+}
+
+#datos_login{
+	display: block;
+	float: left;
+}
+/* Estilo enlace Logout, que cierra la sesión de usuario en la página. */
+.logout{
+	width: 100px;
+	border: 1px solid black;
+	text-align: center; 
+	font-size: 12px;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	margin-left: 5px;
+	padding-left: 2px;
+	padding-right: 2px;
+	cursor: pointer;
+	text-decoration: none;
+	color: white;
+	display: block;
+	float: right;
+}
+/* Estilo caja box que contiene acordeon en about.html*/
+#box{
+	width: 60%;
+	float: left;
+	margin-top: 40px;
+}
+
+/* Separamos la caja acordeon del título que le precede*/
+#acordeon{
+	margin-top: 20px;
+}
+
+/* Estilos reloj contenido en reloj.html */
+#reloj{
+	font-size: 35px;
+	font-weight: bold;
+	font-family: Helvetica, Arial;
+	color: #333;
+	border: 5px solid #333;
+	width: 40%;
+	padding: 30px;
+	margin: 0px auto;/* lo ponemos en el centro*/
+	text-align: center;
+}
+
+/* Estilos formularios general */
+form input[type="text"],
+form input[type="password"],
+form input[type="email"],
+form input[type="number"],
+select{
+	padding: 5px;
+	border-radius: 2px;
+	border: 1px solid #ccc;
+	width: 80%;
+	margin-bottom: 10px;
+	margin-top: 5px;
+}
+
+form input[type="submit"]{
+	background: #eee;
+	padding: 10px;
+	border: 1px solid #ccc;
+	color: #333;
+	cursor: pointer;
+}
+/* Estilos formulario de contacto */
+#form_contact{
+	width: 50%;
+	margin-top: 15px;
+	font-family: Helvetica, Arial;
+}
+
+#form_contact label{
+	display: block;
+	width: 100%;
+	margin-top: 5px;
+}
+
+/* Cambiamos el estilo del mensaje de error que aparecen en la validación de formulario 
+de del plugin jQuery Form Validation */
+.form-error{
+	float: right;
+	font-size: 11px;
+	background: red;
+	color: white;
+	padding: 10px;
+	width: 65%;
+}
+
+

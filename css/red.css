@@ -1,0 +1,34 @@
+body{
+	background: url('../img/rojo.jpg');
+	/*con esta propiedad a fixed el fondo nunca se acaba aunque la imagen
+	sea menor. Si yo hago scroll para abajo se sigue viendo el fondo siempre.*/
+	background-attachment: fixed;
+}
+
+#logo{
+	/* Le damos color al fondo del logo */
+	background: #CA3413;
+}
+
+/* Cuando pasemos el ratón por encima de un elemento li de las listas de #menu.
+Entonces cambiamos el color de fondo. Así creamos el efecto sobre el li seleccionado. */
+#menu ul li:hover{/* Ya le hemos puesto la transision en 300ms. */
+	background: #CA3413;
+}
+
+/* Botones Leer más. */
+.button-more{
+	background: #CA3413;
+}
+
+/* Estilo enlace Logout, que cierra la sesión de usuario en la página. */
+.logout{
+	background: #CA3413;
+}
+
+/* Fondo para el acordeon de about.html(es de jQuery UI) */
+.ui-accordion .ui-accordion-header{
+	background: #CA3413 !important;
+	border: 1px solid #CA3413;
+	color: white;
+}
